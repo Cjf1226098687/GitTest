@@ -25,4 +25,9 @@ public class GitTest {
 
         System.out.println(mobileCodeInfo);
     }
+    
+    @Test
+    public void testGit() {
+        system.out.println("Git");
+    }
 }
