@@ -1,5 +1,7 @@
 package com.qfedu.test;
 
+import com.qfedu.webxml.MobileCodeWS;
+import com.qfedu.webxml.MobileCodeWSSoap;
 import org.junit.Test;
 
 /**
@@ -11,5 +13,16 @@ public class GitTest {
     @Test
     public void demo() {
         System.out.println("This is Git Test");
+    }
+
+    @Test
+    public void testMobileNum() {
+        MobileCodeWS mobileCodeWS = new MobileCodeWS();
+
+        MobileCodeWSSoap mobileCodeWSSoap = mobileCodeWS.getMobileCodeWSSoap();
+
+        String mobileCodeInfo = mobileCodeWSSoap.getMobileCodeInfo("18337259450", "");
+
+        System.out.println(mobileCodeInfo);
     }
 }
